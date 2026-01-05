@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Security.Cryptography.Pkcs;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AppSenSoutenance.Models
+{
+    public class Professeur: Utilisateur
+    {
+        [Required, MaxLength(80)]
+        public string SpecialiteProfesseur { get; set; }
+
+    }
+}

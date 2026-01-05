@@ -123,11 +123,17 @@
       <DependentUpon>frmMDI.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AnneeAcademique.cs" />
     <Compile Include="Models\BdSenSoutenanceContext.cs" />
+    <Compile Include="Models\Candidat.cs" />
+    <Compile Include="Models\ChefDepartement.cs" />
+    <Compile Include="Models\Departement.cs" />
     <Compile Include="Models\Mémoire.cs" />
+    <Compile Include="Models\Professeur.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\Soutenance.cs" />
+    <Compile Include="Models\Utilisateur.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Paramètre\frmAnneeAcademique.cs">

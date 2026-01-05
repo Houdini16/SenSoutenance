@@ -21,5 +21,15 @@ namespace AppSenSoutenance.Models
 
         public DbSet<Soutenance> Soutenances { get; set; }
 
+        public DbSet<Utilisateur> Utilisateurs { get; set; }
+
+        public DbSet<Admin> Admin { get; set; }
+
+        DbSet<ChefDepartement> ChefDepartements { get; set; }
+
+        public DbSet<Candidat> Candidats { get; set; }
+
+        public DbSet<Professeur> Professeurs { get; set; }
+        public object AnneeAcademiques { get; internal set; }
     }
 }
