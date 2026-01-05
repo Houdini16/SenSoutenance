@@ -28,20 +28,195 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSession = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbbAnneeAcademique = new System.Windows.Forms.ComboBox();
+            this.txtRSession = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtRanneeAcademique = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(318, 67);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(737, 475);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(173, 503);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(115, 39);
+            this.btnRemove.TabIndex = 9;
+            this.btnRemove.Text = "&Supprimer";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(173, 426);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(115, 39);
+            this.btnEdit.TabIndex = 8;
+            this.btnEdit.Text = "&Modifier";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(173, 349);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(115, 39);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = "&Ajouter";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(176, 21);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(115, 39);
+            this.btnSelect.TabIndex = 10;
+            this.btnSelect.Text = "&Selectionner";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 184);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Année Académique :";
+            // 
+            // txtSession
+            // 
+            this.txtSession.Location = new System.Drawing.Point(12, 105);
+            this.txtSession.Name = "txtSession";
+            this.txtSession.Size = new System.Drawing.Size(276, 22);
+            this.txtSession.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 86);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Séssion :";
+            // 
+            // cbbAnneeAcademique
+            // 
+            this.cbbAnneeAcademique.FormattingEnabled = true;
+            this.cbbAnneeAcademique.Location = new System.Drawing.Point(12, 209);
+            this.cbbAnneeAcademique.Name = "cbbAnneeAcademique";
+            this.cbbAnneeAcademique.Size = new System.Drawing.Size(276, 24);
+            this.cbbAnneeAcademique.TabIndex = 15;
+            // 
+            // txtRSession
+            // 
+            this.txtRSession.Location = new System.Drawing.Point(315, 40);
+            this.txtRSession.Name = "txtRSession";
+            this.txtRSession.Size = new System.Drawing.Size(276, 22);
+            this.txtRSession.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(315, 21);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Séssion :";
+            // 
+            // txtRanneeAcademique
+            // 
+            this.txtRanneeAcademique.Location = new System.Drawing.Point(616, 40);
+            this.txtRanneeAcademique.Name = "txtRanneeAcademique";
+            this.txtRanneeAcademique.Size = new System.Drawing.Size(276, 22);
+            this.txtRanneeAcademique.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(616, 21);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(132, 16);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Année Académique :";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(940, 21);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(115, 39);
+            this.btnSearch.TabIndex = 20;
+            this.btnSearch.Text = "&Rechercher";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // frmSession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1080, 603);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtRanneeAcademique);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtRSession);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbbAnneeAcademique);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSession);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSelect);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "frmSession";
             this.Text = "Séssion";
+            this.Load += new System.EventHandler(this.frmSession_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSession;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbbAnneeAcademique;
+        private System.Windows.Forms.TextBox txtRSession;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtRanneeAcademique;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

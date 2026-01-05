@@ -129,6 +129,7 @@
     <Compile Include="Models\Candidat.cs" />
     <Compile Include="Models\ChefDepartement.cs" />
     <Compile Include="Models\Departement.cs" />
+    <Compile Include="Models\ListItem.cs" />
     <Compile Include="Models\Mémoire.cs" />
     <Compile Include="Models\Professeur.cs" />
     <Compile Include="Models\Session.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Models\Utilisateur.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\FillerList.cs" />
     <Compile Include="View\Paramètre\frmAnneeAcademique.cs">
       <SubType>Form</SubType>
     </Compile>
