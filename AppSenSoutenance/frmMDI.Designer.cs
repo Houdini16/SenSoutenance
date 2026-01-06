@@ -36,6 +36,10 @@
             this.annéeAcadémiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.séssionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encadreurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.soutenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mémoireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chefDeDepartementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,20 +61,20 @@
             this.seDeconnecterToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(66, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(66, 24);
             this.toolStripMenuItem1.Text = "Action";
             // 
             // seDeconnecterToolStripMenuItem
             // 
             this.seDeconnecterToolStripMenuItem.Name = "seDeconnecterToolStripMenuItem";
-            this.seDeconnecterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.seDeconnecterToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.seDeconnecterToolStripMenuItem.Text = "&Se deconnecter";
             this.seDeconnecterToolStripMenuItem.Click += new System.EventHandler(this.seDeconnecterToolStripMenuItem_Click);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.quitterToolStripMenuItem.Text = "&Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -79,9 +83,13 @@
             this.paramèToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.annéeAcadémiqueToolStripMenuItem,
             this.séssionToolStripMenuItem,
-            this.encadreurToolStripMenuItem});
+            this.encadreurToolStripMenuItem,
+            this.soutenanceToolStripMenuItem,
+            this.mémoireToolStripMenuItem,
+            this.chefDeDepartementToolStripMenuItem,
+            this.departementToolStripMenuItem});
             this.paramèToolStripMenuItem.Name = "paramèToolStripMenuItem";
-            this.paramèToolStripMenuItem.Size = new System.Drawing.Size(90, 26);
+            this.paramèToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.paramèToolStripMenuItem.Text = "&Paramètre";
             // 
             // annéeAcadémiqueToolStripMenuItem
@@ -104,6 +112,30 @@
             this.encadreurToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.encadreurToolStripMenuItem.Text = "&Professeur";
             this.encadreurToolStripMenuItem.Click += new System.EventHandler(this.encadreurToolStripMenuItem_Click);
+            // 
+            // soutenanceToolStripMenuItem
+            // 
+            this.soutenanceToolStripMenuItem.Name = "soutenanceToolStripMenuItem";
+            this.soutenanceToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.soutenanceToolStripMenuItem.Text = "Soutenance";
+            // 
+            // mémoireToolStripMenuItem
+            // 
+            this.mémoireToolStripMenuItem.Name = "mémoireToolStripMenuItem";
+            this.mémoireToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.mémoireToolStripMenuItem.Text = "Mémoire";
+            // 
+            // chefDeDepartementToolStripMenuItem
+            // 
+            this.chefDeDepartementToolStripMenuItem.Name = "chefDeDepartementToolStripMenuItem";
+            this.chefDeDepartementToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.chefDeDepartementToolStripMenuItem.Text = "Chef de departement";
+            // 
+            // departementToolStripMenuItem
+            // 
+            this.departementToolStripMenuItem.Name = "departementToolStripMenuItem";
+            this.departementToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.departementToolStripMenuItem.Text = "Departement";
             // 
             // frmMDI
             // 
@@ -136,5 +168,9 @@
         private System.Windows.Forms.ToolStripMenuItem annéeAcadémiqueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem séssionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem encadreurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem soutenanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mémoireToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chefDeDepartementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departementToolStripMenuItem;
     }
 }

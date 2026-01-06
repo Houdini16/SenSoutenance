@@ -82,5 +82,7 @@ namespace AppSenSoutenance
             this.Height = myComputer.Screen.Bounds.Height;
             this.Location = new Point(0, 0);
         }
+
+       
     }
 }
