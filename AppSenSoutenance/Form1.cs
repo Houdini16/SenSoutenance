@@ -20,6 +20,7 @@ namespace AppSenSoutenance
         private void btnSeConnecter_Click(object sender, EventArgs e)
         {
             frmMDI f = new frmMDI();
+            f.profil = "Admin";
             f.Show();
             this.Hide();
 
