@@ -145,6 +145,10 @@
     <Compile Include="View\Account\frmUtilisateur.Designer.cs">
       <DependentUpon>frmUtilisateur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AnneeAcademique.cs" />
+    <Compile Include="Models\BdSenSoutenanceContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Paramètre\frmAnneeAcademique.cs">
       <SubType>Form</SubType>
     </Compile>
