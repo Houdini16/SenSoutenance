@@ -120,25 +120,29 @@
             // 
             this.soutenanceToolStripMenuItem.Name = "soutenanceToolStripMenuItem";
             this.soutenanceToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
-            this.soutenanceToolStripMenuItem.Text = "Soutenance";
+            this.soutenanceToolStripMenuItem.Text = "&Soutenance";
+            this.soutenanceToolStripMenuItem.Click += new System.EventHandler(this.soutenanceToolStripMenuItem_Click);
             // 
             // mémoireToolStripMenuItem
             // 
             this.mémoireToolStripMenuItem.Name = "mémoireToolStripMenuItem";
             this.mémoireToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
-            this.mémoireToolStripMenuItem.Text = "Mémoire";
+            this.mémoireToolStripMenuItem.Text = "&Mémoire";
+            this.mémoireToolStripMenuItem.Click += new System.EventHandler(this.mémoireToolStripMenuItem_Click);
             // 
             // chefDeDepartementToolStripMenuItem
             // 
             this.chefDeDepartementToolStripMenuItem.Name = "chefDeDepartementToolStripMenuItem";
             this.chefDeDepartementToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.chefDeDepartementToolStripMenuItem.Text = "Chef de departement";
+            this.chefDeDepartementToolStripMenuItem.Click += new System.EventHandler(this.chefDeDepartementToolStripMenuItem_Click);
             // 
             // departementToolStripMenuItem
             // 
             this.departementToolStripMenuItem.Name = "departementToolStripMenuItem";
             this.departementToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
             this.departementToolStripMenuItem.Text = "Departement";
+            this.departementToolStripMenuItem.Click += new System.EventHandler(this.departementToolStripMenuItem_Click);
             // 
             // sécuritéToolStripMenuItem
             // 
@@ -151,7 +155,7 @@
             // utilisateurToolStripMenuItem
             // 
             this.utilisateurToolStripMenuItem.Name = "utilisateurToolStripMenuItem";
-            this.utilisateurToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.utilisateurToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.utilisateurToolStripMenuItem.Text = "Utilisateur";
             this.utilisateurToolStripMenuItem.Click += new System.EventHandler(this.utilisateurToolStripMenuItem_Click);
             // 

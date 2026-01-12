@@ -163,6 +163,30 @@
     <Compile Include="View\Paramètre\frmSession.Designer.cs">
       <DependentUpon>frmSession.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Paramètre\frmChefDepartement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Paramètre\frmChefDepartement.Designer.cs">
+      <DependentUpon>frmChefDepartement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Paramètre\frmDepartement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Paramètre\frmDepartement.Designer.cs">
+      <DependentUpon>frmDepartement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Paramètre\frmMemoire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Paramètre\frmMemoire.Designer.cs">
+      <DependentUpon>frmMemoire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Paramètre\frmSoutenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Paramètre\frmSoutenance.Designer.cs">
+      <DependentUpon>frmSoutenance.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +213,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Paramètre\frmSession.resx">
       <DependentUpon>frmSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Paramètre\frmChefDepartement.resx">
+      <DependentUpon>frmChefDepartement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Paramètre\frmDepartement.resx">
+      <DependentUpon>frmDepartement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Paramètre\frmMemoire.resx">
+      <DependentUpon>frmMemoire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Paramètre\frmSoutenance.resx">
+      <DependentUpon>frmSoutenance.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

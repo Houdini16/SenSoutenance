@@ -99,5 +99,41 @@ namespace AppSenSoutenance
             f.Show();
             f.WindowState = FormWindowState.Maximized;
         }
+
+        private void soutenanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fermer();
+            frmSoutenance f = new frmSoutenance();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
+
+        private void mémoireToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fermer();
+            frmMemoire f = new frmMemoire();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
+
+        private void chefDeDepartementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fermer();
+            frmChefDepartement f = new frmChefDepartement();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
+
+        private void departementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fermer();
+            frmDepartement f = new frmDepartement();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
     }
 }
