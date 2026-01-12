@@ -22,6 +22,76 @@ namespace AppSenSoutenance
         public frmMDI()
         {
             InitializeComponent();
+
+            ApplyBlueTheme();
+        }
+
+        private void ApplyBlueTheme()
+        {
+            Color bluePrimary = Color.FromArgb(13, 71, 161);
+            Color blueHover = Color.FromArgb(10, 56, 131);
+            Color blueDark = Color.FromArgb(8, 47, 110);
+            Color bg = Color.FromArgb(227, 242, 253);
+
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BackColor = bg;
+
+            if (menuStrip1 != null)
+            {
+                menuStrip1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+                menuStrip1.BackColor = blueDark;
+                menuStrip1.ForeColor = Color.White;
+                menuStrip1.Renderer = new ToolStripProfessionalRenderer(new BlueColorTable(blueDark, bluePrimary, blueHover));
+
+                foreach (ToolStripItem item in menuStrip1.Items)
+                {
+                    item.ForeColor = Color.White;
+                }
+            }
+
+            Load += (_, __) =>
+            {
+                foreach (Control c in Controls)
+                {
+                    if (c is MdiClient mdi)
+                    {
+                        mdi.BackColor = bg;
+                    }
+                }
+            };
+        }
+
+        private sealed class BlueColorTable : ProfessionalColorTable
+        {
+            private readonly Color _barBack;
+            private readonly Color _itemSelect;
+            private readonly Color _itemHover;
+
+            public BlueColorTable(Color barBack, Color itemSelect, Color itemHover)
+            {
+                _barBack = barBack;
+                _itemSelect = itemSelect;
+                _itemHover = itemHover;
+                UseSystemColors = false;
+            }
+
+            public override Color MenuStripGradientBegin => _barBack;
+            public override Color MenuStripGradientEnd => _barBack;
+            public override Color ToolStripGradientBegin => _barBack;
+            public override Color ToolStripGradientMiddle => _barBack;
+            public override Color ToolStripGradientEnd => _barBack;
+            public override Color ImageMarginGradientBegin => Color.White;
+            public override Color ImageMarginGradientMiddle => Color.White;
+            public override Color ImageMarginGradientEnd => Color.White;
+            public override Color MenuBorder => _barBack;
+            public override Color ToolStripBorder => _barBack;
+            public override Color MenuItemSelected => _itemHover;
+            public override Color MenuItemBorder => _itemSelect;
+            public override Color MenuItemPressedGradientBegin => _itemSelect;
+            public override Color MenuItemPressedGradientMiddle => _itemSelect;
+            public override Color MenuItemPressedGradientEnd => _itemSelect;
+            public override Color MenuItemSelectedGradientBegin => _itemHover;
+            public override Color MenuItemSelectedGradientEnd => _itemHover;
         }
         /// <summary>
         /// Méthode pour fermer tous les formulaires enfants ouverts 
