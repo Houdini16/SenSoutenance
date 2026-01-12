@@ -46,6 +46,7 @@
             // 
             // cbbAnneeAcademique
             // 
+            this.cbbAnneeAcademique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbAnneeAcademique.FormattingEnabled = true;
             this.cbbAnneeAcademique.Location = new System.Drawing.Point(12, 203);
             this.cbbAnneeAcademique.Name = "cbbAnneeAcademique";
@@ -55,6 +56,7 @@
             // 
             // txtDocumentDuMemoire
             // 
+            this.txtDocumentDuMemoire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDocumentDuMemoire.Location = new System.Drawing.Point(12, 377);
             this.txtDocumentDuMemoire.Name = "txtDocumentDuMemoire";
             this.txtDocumentDuMemoire.Size = new System.Drawing.Size(311, 26);
@@ -64,6 +66,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(110)))));
             this.label6.Location = new System.Drawing.Point(12, 341);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 20);
@@ -73,6 +76,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(110)))));
             this.label4.Location = new System.Drawing.Point(12, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 20);
@@ -81,6 +85,7 @@
             // 
             // txtSujet
             // 
+            this.txtSujet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSujet.Location = new System.Drawing.Point(12, 106);
             this.txtSujet.Name = "txtSujet";
             this.txtSujet.Size = new System.Drawing.Size(311, 26);
@@ -90,6 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(110)))));
             this.label3.Location = new System.Drawing.Point(12, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 20);
@@ -98,6 +104,7 @@
             // 
             // cbbSession
             // 
+            this.cbbSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbSession.FormattingEnabled = true;
             this.cbbSession.Location = new System.Drawing.Point(12, 285);
             this.cbbSession.Name = "cbbSession";
@@ -108,6 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(110)))));
             this.label1.Location = new System.Drawing.Point(12, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 20);
@@ -121,7 +129,11 @@
             this.btnRemove.Size = new System.Drawing.Size(115, 34);
             this.btnRemove.TabIndex = 8;
             this.btnRemove.Text = "&Supprimer";
-            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnEdit
@@ -131,7 +143,11 @@
             this.btnEdit.Size = new System.Drawing.Size(115, 34);
             this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "&Modifier";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
@@ -141,16 +157,38 @@
             this.btnAdd.Size = new System.Drawing.Size(115, 34);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "&Ajouter";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(110)))));
+            this.dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(110)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(346, 102);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(629, 492);
             this.dataGridView1.TabIndex = 27;
             // 
@@ -162,12 +200,18 @@
             this.btnParcourir.TabIndex = 5;
             this.btnParcourir.Text = "&Parcourir";
             this.btnParcourir.UseVisualStyleBackColor = true;
+            this.btnParcourir.BackColor = System.Drawing.Color.White;
+            this.btnParcourir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
+            this.btnParcourir.FlatAppearance.BorderSize = 2;
+            this.btnParcourir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParcourir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.btnParcourir.Click += new System.EventHandler(this.btnParcourir_Click);
             // 
             // frmMemoire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(999, 648);
             this.ControlBox = false;
             this.Controls.Add(this.btnParcourir);
