@@ -15,6 +15,8 @@ namespace AppSenSoutenance.Models
 
         public DbSet<AnneeAcademique> AnneesAcademiques { get; set; }
 
+        public DbSet<Departement> Departements { get; set; }
+
         public DbSet<Mémoire> Mémoires { get; set; }
 
         public DbSet<Session> Sessions { get; set; }
@@ -25,11 +27,10 @@ namespace AppSenSoutenance.Models
 
         public DbSet<Admin> Admin { get; set; }
 
-        DbSet<ChefDepartement> ChefDepartements { get; set; }
+        public DbSet<ChefDepartement> ChefDepartements { get; set; }
 
         public DbSet<Candidat> Candidats { get; set; }
 
         public DbSet<Professeur> Professeurs { get; set; }
-        public object AnneeAcademiques { get; internal set; }
     }
 }

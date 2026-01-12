@@ -23,6 +23,10 @@ namespace AppSenSoutenance.View.Paramètre
         private void frmAnneeAcademique_Load(object sender, EventArgs e)
         {
             dgAnneeAcademique.DataSource = db.AnneesAcademiques.ToList();
+            dgAnneeAcademique.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgAnneeAcademique.MultiSelect = false;
+            dgAnneeAcademique.ReadOnly = true;
+            dgAnneeAcademique.AutoGenerateColumns = true;
         }
 
         public void Effacer()
@@ -34,10 +38,22 @@ namespace AppSenSoutenance.View.Paramètre
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtLibelleAnneeAcademique.Text))
+            {
+                MessageBox.Show("Veuillez saisir le libellé.");
+                return;
+            }
+
+            if (!int.TryParse(txtAnneeAcademiqueVal.Text, out int val))
+            {
+                MessageBox.Show("Veuillez saisir une valeur numérique valide.");
+                return;
+            }
+
             AnneeAcademique anneeAcademique = new AnneeAcademique
             {
                 LibelleAnneeAcademique = txtLibelleAnneeAcademique.Text,
-                AnneeAcademiqueVal = int.Parse(txtAnneeAcademiqueVal.Text)
+                AnneeAcademiqueVal = val
             };
             db.AnneesAcademiques.Add(anneeAcademique);
             db.SaveChanges();
@@ -46,16 +62,34 @@ namespace AppSenSoutenance.View.Paramètre
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (dgAnneeAcademique.CurrentRow == null)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne à modifier.");
+                return;
+            }
+
+            if (!int.TryParse(txtAnneeAcademiqueVal.Text, out int val))
+            {
+                MessageBox.Show("Veuillez saisir une valeur numérique valide.");
+                return;
+            }
+
             int? id = int.Parse(dgAnneeAcademique.CurrentRow.Cells[0].Value.ToString());
             AnneeAcademique anneeAcademique = db.AnneesAcademiques.Find(id);
             anneeAcademique.LibelleAnneeAcademique = txtLibelleAnneeAcademique.Text;
-            anneeAcademique.AnneeAcademiqueVal = int.Parse(txtAnneeAcademiqueVal.Text);
+            anneeAcademique.AnneeAcademiqueVal = val;
             db.SaveChanges();
             Effacer();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            if (dgAnneeAcademique.CurrentRow == null)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne à supprimer.");
+                return;
+            }
+
             int? id = int.Parse(dgAnneeAcademique.CurrentRow.Cells[0].Value.ToString());
             AnneeAcademique anneeAcademique = db.AnneesAcademiques.Find(id);
             db.AnneesAcademiques.Remove(anneeAcademique);
@@ -65,6 +99,12 @@ namespace AppSenSoutenance.View.Paramètre
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            if (dgAnneeAcademique.CurrentRow == null)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne.");
+                return;
+            }
+
             txtLibelleAnneeAcademique.Text = dgAnneeAcademique.CurrentRow.Cells[1].Value.ToString();
             txtAnneeAcademiqueVal.Text = dgAnneeAcademique.CurrentRow.Cells[2].Value.ToString();    
         }

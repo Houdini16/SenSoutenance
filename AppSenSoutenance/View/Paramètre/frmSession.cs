@@ -31,9 +31,27 @@ namespace AppSenSoutenance.View.Paramètre
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtSession.Text))
+            {
+                MessageBox.Show("Veuillez saisir la session.");
+                return;
+            }
+
+            if (cbbAnneeAcademique.SelectedValue == null || string.IsNullOrWhiteSpace(cbbAnneeAcademique.SelectedValue.ToString()))
+            {
+                MessageBox.Show("Veuillez sélectionner une année académique.");
+                return;
+            }
+
+            if (!int.TryParse(cbbAnneeAcademique.SelectedValue.ToString(), out int anneeId))
+            {
+                MessageBox.Show("Année académique invalide.");
+                return;
+            }
+
             Models.Session session = new Models.Session();
             session.LibelleSession = txtSession.Text;
-            session.IdAnneeAcademique = int.Parse(cbbAnneeAcademique.SelectedValue.ToString());
+            session.IdAnneeAcademique = anneeId;
             db.Sessions.Add(session);
             db.SaveChanges();
             Effacer();
@@ -52,6 +70,12 @@ namespace AppSenSoutenance.View.Paramètre
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne.");
+                return;
+            }
+
             int? id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             Models.Session session = db.Sessions.Find(id);
             txtSession.Text = session.LibelleSession;
@@ -60,16 +84,46 @@ namespace AppSenSoutenance.View.Paramètre
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne à modifier.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtSession.Text))
+            {
+                MessageBox.Show("Veuillez saisir la session.");
+                return;
+            }
+
+            if (cbbAnneeAcademique.SelectedValue == null || string.IsNullOrWhiteSpace(cbbAnneeAcademique.SelectedValue.ToString()))
+            {
+                MessageBox.Show("Veuillez sélectionner une année académique.");
+                return;
+            }
+
+            if (!int.TryParse(cbbAnneeAcademique.SelectedValue.ToString(), out int anneeId))
+            {
+                MessageBox.Show("Année académique invalide.");
+                return;
+            }
+
             int? id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             Models.Session session = db.Sessions.Find(id);
             session.LibelleSession = txtSession.Text;
-            session.IdAnneeAcademique = (int?)cbbAnneeAcademique.SelectedValue;
+            session.IdAnneeAcademique = anneeId;
             db.SaveChanges();
             Effacer();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne à supprimer.");
+                return;
+            }
+
             int? id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             Models.Session session = db.Sessions.Find(id);
             db.Sessions.Remove(session);
