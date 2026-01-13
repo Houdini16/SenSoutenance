@@ -18,27 +18,37 @@ namespace AppSenSoutenance.View.Paramètre
         public frmProfesseur()
         {
             InitializeComponent();
+
+            btnAdd.Click += btnAdd_Click;
+            btnEdit.Click += btnEdit_Click;
+            btnRemove.Click += btnRemove_Click;
+            dataGridView2.CellClick += dataGridView2_CellClick;
         }
 
         private void frmProfesseur_Load(object sender, EventArgs e)
         {
             Effacer();
+
+            if (tabControl1 != null && tabPage2 != null)
+            {
+                tabControl1.SelectedTab = tabPage2;
+            }
         }
 
         public void Effacer()
         {
-            txtSpecialite.Clear();
-            dataGridView1.DataSource = db.Professeurs.Select(p => new
+            textBox1.Clear();
+            dataGridView2.DataSource = db.Professeurs.Select(p => new
             {
                 p.IdUtilisateur,
                 p.SpecialiteProfesseur
             }).ToList();
-            txtSpecialite.Focus();
+            textBox1.Focus();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtSpecialite.Text))
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
                 MessageBox.Show("Veuillez saisir la spécialité.");
                 return;
@@ -46,7 +56,7 @@ namespace AppSenSoutenance.View.Paramètre
 
             Professeur professeur = new Professeur
             {
-                SpecialiteProfesseur = txtSpecialite.Text,
+                SpecialiteProfesseur = textBox1.Text,
                 NomUtilisateur = "Professeur",
                 PrenomUtilisateur = "N/A",
                 TellUtilisateur = "000000000",
@@ -61,48 +71,48 @@ namespace AppSenSoutenance.View.Paramètre
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow == null)
+            if (dataGridView2.CurrentRow == null)
             {
                 MessageBox.Show("Veuillez sélectionner une ligne à modifier.");
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(txtSpecialite.Text))
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
                 MessageBox.Show("Veuillez saisir la spécialité.");
                 return;
             }
 
-            int? id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            int? id = int.Parse(dataGridView2.CurrentRow.Cells[0].Value.ToString());
             Professeur professeur = db.Professeurs.Find(id);
-            professeur.SpecialiteProfesseur = txtSpecialite.Text;
+            professeur.SpecialiteProfesseur = textBox1.Text;
             db.SaveChanges();
             Effacer();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow == null)
+            if (dataGridView2.CurrentRow == null)
             {
                 MessageBox.Show("Veuillez sélectionner une ligne à supprimer.");
                 return;
             }
 
-            int? id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            int? id = int.Parse(dataGridView2.CurrentRow.Cells[0].Value.ToString());
             Professeur professeur = db.Professeurs.Find(id);
             db.Professeurs.Remove(professeur);
             db.SaveChanges();
             Effacer();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.CurrentRow == null)
+            if (dataGridView2.CurrentRow == null)
             {
                 return;
             }
 
-            txtSpecialite.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox1.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }
