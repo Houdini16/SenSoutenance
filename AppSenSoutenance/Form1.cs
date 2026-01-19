@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -208,16 +210,31 @@ namespace AppSenSoutenance
 
         private void btnSeConnecter_Click(object sender, EventArgs e)
         {
+            try
+            {
+            BdSenSoutenanceContext  db = new BdSenSoutenanceContext();
+            var leUser = db.Utilisateurs.Where(a => a.EmailUtilisateur.ToLower() == txtIdentifiant.Text.ToLower()).FirstOrDefault();
+            if (leUser != null) {
+                    
+            }
             frmMDI f = new frmMDI();
             f.profil = "Admin";
             f.Show();
             this.Hide();
 
+            }
+            catch (Exception ex)
+            {
+                Logger.WriteDataError("frmConnexion-btnSeConnecter_Click", ex.ToString());
+            }
         }
+
 
         private void btnQuitter_Click(object sender, EventArgs e)
         {
+            Logger.WriteLogSystem("Deconnexion", "btnQuitter_Click");
             Application.Exit();
+            
         }
     }
 }
