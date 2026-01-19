@@ -32,5 +32,7 @@ namespace AppSenSoutenance.Models
         public DbSet<Candidat> Candidats { get; set; }
 
         public DbSet<Professeur> Professeurs { get; set; }
+
+        public DbSet<Td_Erreur> Td_Erreur { get; set; }
     }
 }
