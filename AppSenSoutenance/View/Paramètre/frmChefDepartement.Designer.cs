@@ -1,4 +1,4 @@
-﻿namespace AppSenSoutenance.View.Paramètre
+﻿    namespace AppSenSoutenance.View.Paramètre
 {
     partial class frmChefDepartement
     {
