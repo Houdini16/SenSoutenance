@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppSenSoutenance.Models
 {
@@ -12,7 +8,7 @@ namespace AppSenSoutenance.Models
     {
         [Key]
         public int IdSoutenance { get; set; }
-        public DateTime DateSoutenance { get; set; }= DateTime.Now;
+        public DateTime DateSoutenance { get; set; } = DateTime.Now;
 
         [MaxLength(2000)]
         public string LieuSoutenance { get; set; }
@@ -24,7 +20,7 @@ namespace AppSenSoutenance.Models
         public String MentionSoutenance { get; set; }
 
         [MaxLength(5000)]
-        public String ObservationsSoutenance { get; set; } 
+        public String ObservationsSoutenance { get; set; }
 
         public int? IdMemoire { get; set; }
 

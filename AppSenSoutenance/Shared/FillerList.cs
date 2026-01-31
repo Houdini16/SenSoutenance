@@ -1,9 +1,6 @@
 ﻿using AppSenSoutenance.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppSenSoutenance.Shared
 {
@@ -21,8 +18,8 @@ namespace AppSenSoutenance.Shared
             var liste = db.AnneesAcademiques.ToList();
             laListe.Add(new ListItem
             {
-                Value= null,
-                Text ="Selectionner"
+                Value = null,
+                Text = "Selectionner"
             });
             foreach (var t in liste)
             {
@@ -105,6 +102,6 @@ namespace AppSenSoutenance.Shared
             }
             return laListe;
         }
-        
+
     }
 }

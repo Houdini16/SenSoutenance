@@ -1,14 +1,10 @@
 ﻿using AppSenSoutenance.Models;
 using AppSenSoutenance.Shared;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppSenSoutenance
@@ -212,15 +208,16 @@ namespace AppSenSoutenance
         {
             try
             {
-            BdSenSoutenanceContext  db = new BdSenSoutenanceContext();
-            var leUser = db.Utilisateurs.Where(a => a.EmailUtilisateur.ToLower() == txtIdentifiant.Text.ToLower()).FirstOrDefault();
-            if (leUser != null) {
-                    
-            }
-            frmMDI f = new frmMDI();
-            f.profil = "Admin";
-            f.Show();
-            this.Hide();
+                BdSenSoutenanceContext db = new BdSenSoutenanceContext();
+                var leUser = db.Utilisateurs.Where(a => a.EmailUtilisateur.ToLower() == txtIdentifiant.Text.ToLower()).FirstOrDefault();
+                if (leUser != null)
+                {
+
+                }
+                frmMDI f = new frmMDI();
+                f.profil = "Admin";
+                f.Show();
+                this.Hide();
 
             }
             catch (Exception ex)
@@ -234,7 +231,22 @@ namespace AppSenSoutenance
         {
             Logger.WriteLogSystem("Deconnexion", "btnQuitter_Click");
             Application.Exit();
-            
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelCard_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

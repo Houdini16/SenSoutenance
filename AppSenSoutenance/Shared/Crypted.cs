@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AppSenSoutenance.Shared
 {
@@ -31,7 +28,7 @@ namespace AppSenSoutenance.Shared
         }
 
         // Verify a hash against a string. 
-       public static bool VerifyMd5Hash(MD5 md5Hash, string input, string hash)
+        public static bool VerifyMd5Hash(MD5 md5Hash, string input, string hash)
         {
 
             // Hash the input. 

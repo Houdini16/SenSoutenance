@@ -203,6 +203,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\Account\frmUtilisateur.resx">
       <DependentUpon>frmUtilisateur.cs</DependentUpon>
@@ -244,6 +245,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Error\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue and Orange Flat Illustrative Education Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tt1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

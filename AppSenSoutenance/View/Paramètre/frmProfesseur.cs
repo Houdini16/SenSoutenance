@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using AppSenSoutenance.Models;
+using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using AppSenSoutenance.Models;
 
 namespace AppSenSoutenance.View.Paramètre
 {
@@ -29,9 +24,9 @@ namespace AppSenSoutenance.View.Paramètre
         {
             Effacer();
 
-            if (tabControl1 != null && tabPage2 != null)
+            if (tabSujet != null && tabPage2 != null)
             {
-                tabControl1.SelectedTab = tabPage2;
+                tabSujet.SelectedTab = tabPage2;
             }
         }
 
@@ -113,6 +108,71 @@ namespace AppSenSoutenance.View.Paramètre
             }
 
             textBox1.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemove_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSlt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAccepter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRejet_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

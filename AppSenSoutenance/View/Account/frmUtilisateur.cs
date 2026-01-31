@@ -1,13 +1,8 @@
 ﻿using AppSenSoutenance.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppSenSoutenance.View.Account
@@ -19,7 +14,7 @@ namespace AppSenSoutenance.View.Account
             InitializeComponent();
         }
 
-       BdSenSoutenanceContext db = new BdSenSoutenanceContext();
+        BdSenSoutenanceContext db = new BdSenSoutenanceContext();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -48,7 +43,7 @@ namespace AppSenSoutenance.View.Account
             candidat.PrenomUtilisateur = txtPrenom.Text;
             candidat.TellUtilisateur = txtTel.Text;
             candidat.EmailUtilisateur = txtEmail.Text;
-            using (MD5 md5Hash = MD5.Create()) 
+            using (MD5 md5Hash = MD5.Create())
             {
                 candidat.MotDePasse = Shared.Crypted.GetMd5Hash(md5Hash, "passer123");
             }
@@ -60,7 +55,12 @@ namespace AppSenSoutenance.View.Account
         private void ResetForm()
         {
             dgUtilisateur.DataSource = db.Utilisateurs.Select(
-                a=> new { a.IdUtilisateur, a.NomUtilisateur, a.PrenomUtilisateur, a.TellUtilisateur, a.EmailUtilisateur }).ToList();
+                a => new { a.IdUtilisateur, a.NomUtilisateur, a.PrenomUtilisateur, a.TellUtilisateur, a.EmailUtilisateur }).ToList();
+        }
+
+        private void frmUtilisateur_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
