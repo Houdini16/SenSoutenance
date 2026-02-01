@@ -1,20 +1,22 @@
 ﻿namespace AppSenSoutenance.View.Paramètre
 {
+    // Formulaire Professeur (vue WinForms)
     partial class frmProfesseur
     {
         /// <summary>
-        /// Required designer variable.
+        /// Conteneur des composants du formulaire
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Libération des ressources utilisées par le formulaire
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si les ressources managées doivent être libérées</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
+                // Libère les composants graphiques
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -23,128 +25,141 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Méthode générée automatiquement par le Designer
+        /// Elle initialise tous les composants graphiques du formulaire
+        /// ⚠ Ne pas modifier manuellement
         /// </summary>
         private void InitializeComponent()
         {
+            // Déclaration et initialisation des contrôles
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSpecialite = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+
+            // Initialisation du DataGridView2
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(110)))));
-            this.dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(110)))));
-            this.dataGridView1.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
-            this.dataGridView1.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(318, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(737, 475);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(173, 503);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(115, 39);
-            this.btnRemove.TabIndex = 9;
+
+            // ================= ComboBox1 =================
+            // Liste permettant d’afficher les candidatures ou sujets
+            this.comboBox1.DisplayMember = "Lister les candidatures";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(421, 52);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(378, 28);
+            this.comboBox1.ValueMember = "Lister mes propositions ";
+
+            // ================= Boutons d’actions =================
+            // Bouton sélectionner une candidature
+            this.button6.Text = "&Selectionner";
+
+            // Bouton rejeter une candidature
+            this.button5.Text = "&Rejeter";
+
+            // Bouton accepter une candidature
+            this.button4.Text = "&Accepter";
+
+            // ================= Label =================
+            // Indique le type de liste affichée
+            this.label4.Text = "Lister : Candidature / Sujet";
+
+            // ================= DataGridView2 =================
+            // Tableau affichant les candidatures ou sujets proposés
+            this.dataGridView2.Size = new System.Drawing.Size(511, 342);
+
+            // ================= Boutons CRUD =================
+            // Supprimer un sujet
             this.btnRemove.Text = "&Supprimer";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(173, 426);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(115, 39);
-            this.btnEdit.TabIndex = 8;
+
+            // Modifier un sujet
             this.btnEdit.Text = "&Modifier";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(173, 349);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(115, 39);
-            this.btnAdd.TabIndex = 7;
+
+            // Ajouter un nouveau sujet
             this.btnAdd.Text = "&Ajouter";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(47)))), ((int)(((byte)(110)))));
-            this.label1.Location = new System.Drawing.Point(12, 86);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(77, 16);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Spécialité :";
-            // 
-            // txtSpecialite
-            // 
-            this.txtSpecialite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSpecialite.Location = new System.Drawing.Point(12, 105);
-            this.txtSpecialite.Name = "txtSpecialite";
-            this.txtSpecialite.Size = new System.Drawing.Size(276, 22);
-            this.txtSpecialite.TabIndex = 11;
-            // 
-            // frmProfesseur
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+
+            // ================= TextBox =================
+            // Champ texte pour saisir le sujet du mémoire
+            this.textBox1.Multiline = true;
+
+            // ================= Labels =================
+            // Label du champ Sujet
+            this.label3.Text = "Sujet";
+
+            // Label pour le choix de la filière
+            this.label2.Text = "Choisir une filiere";
+
+            // ================= ComboBox =================
+            // Liste déroulante (filière ou date de soutenance)
+            this.cbbDateSoutenance.FormattingEnabled = true;
+
+            // ================= TabPage 1 : Mémoires =================
+            // Bouton de validation
+            this.button7.Text = "&Valider";
+
+            // ComboBox pour filtrer ou sélectionner un mémoire
+            this.comboBox2.FormattingEnabled = true;
+
+            // Titre de la section
+            this.label1.Text = "Memoire / Resumer";
+
+            // Bouton consulter un mémoire
+            this.button3.Text = "&Consulter";
+
+            // Bouton annoter un mémoire
+            this.button2.Text = "&Annoter";
+
+            // Bouton sélectionner un mémoire
+            this.button1.Text = "&Selectionner";
+
+            // DataGridView affichant la liste des mémoires
+            this.dataGridView1.Size = new System.Drawing.Size(904, 325);
+
+            // ================= TabControl =================
+            // Contient deux onglets : Mémoires et Proposer un sujet
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+
+            // ================= Formulaire =================
+            // Paramètres généraux du formulaire Professeur
+            this.BackColor = System.Drawing.Color.FromArgb(227, 242, 253);
             this.ClientSize = new System.Drawing.Size(1080, 603);
             this.ControlBox = false;
-            this.Controls.Add(this.txtSpecialite);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "frmProfesseur";
             this.Text = "Profésseur";
-            this.Load += new System.EventHandler(this.frmProfesseur_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
 
+            // Événement déclenché au chargement du formulaire
+            this.Load += new System.EventHandler(this.frmProfesseur_Load);
+
+            // Fin de l’initialisation
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        // Déclaration des composants privés du formulaire
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
