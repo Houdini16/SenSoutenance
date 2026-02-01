@@ -62,5 +62,15 @@ namespace AppSenSoutenance.View.Account
             dgUtilisateur.DataSource = db.Utilisateurs.Select(
                 a=> new { a.IdUtilisateur, a.NomUtilisateur, a.PrenomUtilisateur, a.TellUtilisateur, a.EmailUtilisateur }).ToList();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
