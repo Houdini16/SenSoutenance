@@ -137,6 +137,7 @@
     <Compile Include="Models\Td_Erreur.cs" />
     <Compile Include="Models\Utilisateur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\AppTheme.cs" />
     <Compile Include="Shared\Crypted.cs" />
     <Compile Include="Shared\FillerList.cs" />
     <Compile Include="Shared\Logger.cs" />

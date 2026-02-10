@@ -1,4 +1,5 @@
 ﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Shared;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,6 +11,8 @@ namespace AppSenSoutenance.View.Paramètre
         public frmAnneeAcademique()
         {
             InitializeComponent();
+
+            AppTheme.Apply(this);
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();

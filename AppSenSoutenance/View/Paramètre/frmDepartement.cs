@@ -1,4 +1,5 @@
 ﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Shared;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,6 +13,8 @@ namespace AppSenSoutenance.View.Paramètre
         public frmDepartement()
         {
             InitializeComponent();
+
+            AppTheme.Apply(this);
 
             Load += frmDepartement_Load;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

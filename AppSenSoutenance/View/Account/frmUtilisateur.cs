@@ -1,4 +1,5 @@
 ﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Shared;
 using System;
 using System.Data;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace AppSenSoutenance.View.Account
         public frmUtilisateur()
         {
             InitializeComponent();
+
+            AppTheme.Apply(this);
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();

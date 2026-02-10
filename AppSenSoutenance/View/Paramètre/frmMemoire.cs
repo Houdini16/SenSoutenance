@@ -18,6 +18,8 @@ namespace AppSenSoutenance.View.Paramètre
         {
             InitializeComponent();
 
+            AppTheme.Apply(this);
+
             Load += frmMemoire_Load;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.MultiSelect = false;

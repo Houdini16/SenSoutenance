@@ -12,6 +12,8 @@ namespace AppSenSoutenance.View.Paramètre
         public frmSession()
         {
             InitializeComponent();
+
+            AppTheme.Apply(this);
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();

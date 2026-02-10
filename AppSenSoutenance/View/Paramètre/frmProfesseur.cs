@@ -1,4 +1,5 @@
 ﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Shared;
 using System;
 using System.Data;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace AppSenSoutenance.View.Paramètre
         public frmProfesseur()
         {
             InitializeComponent();
+
+            AppTheme.Apply(this);
 
             btnAdd.Click += btnAdd_Click;
             btnEdit.Click += btnEdit_Click;
