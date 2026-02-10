@@ -93,6 +93,7 @@
             // tabCandidat
             // 
             this.tabCandidat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.tabCandidat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.tabCandidat.Controls.Add(this.btnRemove);
             this.tabCandidat.Controls.Add(this.btnEdit);
             this.tabCandidat.Controls.Add(this.btnAdd);
@@ -109,14 +110,14 @@
             this.tabCandidat.Location = new System.Drawing.Point(4, 25);
             this.tabCandidat.Name = "tabCandidat";
             this.tabCandidat.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCandidat.Size = new System.Drawing.Size(301, 459);
+            this.tabCandidat.Size = new System.Drawing.Size(301, 473);
             this.tabCandidat.TabIndex = 0;
             this.tabCandidat.Text = "Candidat";
             this.tabCandidat.Click += new System.EventHandler(this.tabCandidat_Click);
             // 
             // txtMatricule
             // 
-            this.txtMatricule.Location = new System.Drawing.Point(23, 261);
+            this.txtMatricule.Location = new System.Drawing.Point(23, 285);
             this.txtMatricule.Name = "txtMatricule";
             this.txtMatricule.Size = new System.Drawing.Size(246, 22);
             this.txtMatricule.TabIndex = 9;
@@ -124,7 +125,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 242);
+            this.label5.Location = new System.Drawing.Point(20, 266);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 16);
             this.label5.TabIndex = 8;
@@ -132,7 +133,7 @@
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(23, 203);
+            this.txtTel.Location = new System.Drawing.Point(23, 222);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(246, 22);
             this.txtTel.TabIndex = 7;
@@ -140,7 +141,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 184);
+            this.label4.Location = new System.Drawing.Point(20, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 16);
             this.label4.TabIndex = 6;
@@ -148,7 +149,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(23, 147);
+            this.txtEmail.Location = new System.Drawing.Point(23, 161);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(246, 22);
             this.txtEmail.TabIndex = 5;
@@ -156,7 +157,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 128);
+            this.label3.Location = new System.Drawing.Point(20, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 4;
@@ -165,7 +166,7 @@
             // 
             // txtPrenom
             // 
-            this.txtPrenom.Location = new System.Drawing.Point(23, 94);
+            this.txtPrenom.Location = new System.Drawing.Point(23, 97);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(246, 22);
             this.txtPrenom.TabIndex = 3;
@@ -173,7 +174,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 75);
+            this.label2.Location = new System.Drawing.Point(20, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 2;
@@ -199,7 +200,7 @@
             // 
             // tabProfesseur
             // 
-            this.tabProfesseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.tabProfesseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.tabProfesseur.Controls.Add(this.button1);
             this.tabProfesseur.Controls.Add(this.button2);
             this.tabProfesseur.Controls.Add(this.button3);
@@ -216,13 +217,13 @@
             this.tabProfesseur.Location = new System.Drawing.Point(4, 25);
             this.tabProfesseur.Name = "tabProfesseur";
             this.tabProfesseur.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProfesseur.Size = new System.Drawing.Size(301, 459);
+            this.tabProfesseur.Size = new System.Drawing.Size(301, 473);
             this.tabProfesseur.TabIndex = 1;
             this.tabProfesseur.Text = "Professeur";
             // 
             // txtPSpecialite
             // 
-            this.txtPSpecialite.Location = new System.Drawing.Point(29, 264);
+            this.txtPSpecialite.Location = new System.Drawing.Point(29, 287);
             this.txtPSpecialite.Name = "txtPSpecialite";
             this.txtPSpecialite.Size = new System.Drawing.Size(246, 22);
             this.txtPSpecialite.TabIndex = 22;
@@ -230,7 +231,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 245);
+            this.label6.Location = new System.Drawing.Point(26, 268);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 21;
@@ -238,7 +239,7 @@
             // 
             // txtPTel
             // 
-            this.txtPTel.Location = new System.Drawing.Point(29, 207);
+            this.txtPTel.Location = new System.Drawing.Point(29, 226);
             this.txtPTel.Name = "txtPTel";
             this.txtPTel.Size = new System.Drawing.Size(246, 22);
             this.txtPTel.TabIndex = 20;
@@ -246,7 +247,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 188);
+            this.label7.Location = new System.Drawing.Point(26, 207);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 16);
             this.label7.TabIndex = 19;
@@ -254,7 +255,7 @@
             // 
             // txtPEmail
             // 
-            this.txtPEmail.Location = new System.Drawing.Point(29, 154);
+            this.txtPEmail.Location = new System.Drawing.Point(29, 164);
             this.txtPEmail.Name = "txtPEmail";
             this.txtPEmail.Size = new System.Drawing.Size(246, 22);
             this.txtPEmail.TabIndex = 18;
@@ -262,7 +263,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 135);
+            this.label8.Location = new System.Drawing.Point(26, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 16);
             this.label8.TabIndex = 17;
@@ -270,7 +271,7 @@
             // 
             // txtPPrenom
             // 
-            this.txtPPrenom.Location = new System.Drawing.Point(29, 98);
+            this.txtPPrenom.Location = new System.Drawing.Point(29, 108);
             this.txtPPrenom.Name = "txtPPrenom";
             this.txtPPrenom.Size = new System.Drawing.Size(246, 22);
             this.txtPPrenom.TabIndex = 16;
@@ -278,7 +279,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(26, 79);
+            this.label9.Location = new System.Drawing.Point(26, 89);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 16);
             this.label9.TabIndex = 15;
@@ -302,7 +303,7 @@
             // 
             // tabChefDepartement
             // 
-            this.tabChefDepartement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.tabChefDepartement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.tabChefDepartement.Controls.Add(this.button4);
             this.tabChefDepartement.Controls.Add(this.button5);
             this.tabChefDepartement.Controls.Add(this.button6);
@@ -319,13 +320,13 @@
             this.tabChefDepartement.Location = new System.Drawing.Point(4, 25);
             this.tabChefDepartement.Name = "tabChefDepartement";
             this.tabChefDepartement.Padding = new System.Windows.Forms.Padding(3);
-            this.tabChefDepartement.Size = new System.Drawing.Size(301, 459);
+            this.tabChefDepartement.Size = new System.Drawing.Size(301, 473);
             this.tabChefDepartement.TabIndex = 2;
             this.tabChefDepartement.Text = "Chef departement";
             // 
             // txtCDepartement
             // 
-            this.txtCDepartement.Location = new System.Drawing.Point(29, 261);
+            this.txtCDepartement.Location = new System.Drawing.Point(29, 272);
             this.txtCDepartement.Name = "txtCDepartement";
             this.txtCDepartement.Size = new System.Drawing.Size(246, 22);
             this.txtCDepartement.TabIndex = 35;
@@ -333,7 +334,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 242);
+            this.label11.Location = new System.Drawing.Point(26, 253);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 16);
             this.label11.TabIndex = 34;
@@ -341,7 +342,7 @@
             // 
             // txtCTel
             // 
-            this.txtCTel.Location = new System.Drawing.Point(29, 208);
+            this.txtCTel.Location = new System.Drawing.Point(29, 212);
             this.txtCTel.Name = "txtCTel";
             this.txtCTel.Size = new System.Drawing.Size(246, 22);
             this.txtCTel.TabIndex = 33;
@@ -349,7 +350,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(26, 189);
+            this.label12.Location = new System.Drawing.Point(26, 193);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 16);
             this.label12.TabIndex = 32;
@@ -357,7 +358,7 @@
             // 
             // txtCEmail
             // 
-            this.txtCEmail.Location = new System.Drawing.Point(29, 149);
+            this.txtCEmail.Location = new System.Drawing.Point(29, 154);
             this.txtCEmail.Name = "txtCEmail";
             this.txtCEmail.Size = new System.Drawing.Size(246, 22);
             this.txtCEmail.TabIndex = 31;
@@ -365,7 +366,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(26, 130);
+            this.label13.Location = new System.Drawing.Point(26, 135);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(47, 16);
             this.label13.TabIndex = 30;
@@ -373,7 +374,7 @@
             // 
             // txtCPrenom
             // 
-            this.txtCPrenom.Location = new System.Drawing.Point(29, 96);
+            this.txtCPrenom.Location = new System.Drawing.Point(29, 98);
             this.txtCPrenom.Name = "txtCPrenom";
             this.txtCPrenom.Size = new System.Drawing.Size(246, 22);
             this.txtCPrenom.TabIndex = 29;
@@ -381,7 +382,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(26, 77);
+            this.label14.Location = new System.Drawing.Point(26, 79);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 16);
             this.label14.TabIndex = 28;
@@ -405,23 +406,22 @@
             // 
             // dgUtilisateur
             // 
-            this.dgUtilisateur.BackgroundColor = System.Drawing.Color.White;
+            this.dgUtilisateur.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgUtilisateur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgUtilisateur.Location = new System.Drawing.Point(348, 37);
             this.dgUtilisateur.Name = "dgUtilisateur";
             this.dgUtilisateur.RowHeadersWidth = 51;
             this.dgUtilisateur.RowTemplate.Height = 24;
-            this.dgUtilisateur.Size = new System.Drawing.Size(637, 463);
+            this.dgUtilisateur.Size = new System.Drawing.Size(637, 473);
             this.dgUtilisateur.TabIndex = 1;
             // 
             // btnRemove
             // 
-            this.btnRemove.BackColor = System.Drawing.Color.White;
-            this.btnRemove.FlatAppearance.BorderSize = 2;
-            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.btnRemove.FlatAppearance.BorderSize = 0;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.btnRemove.Location = new System.Drawing.Point(167, 381);
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(167, 408);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(102, 27);
@@ -431,12 +431,11 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.White;
-            this.btnEdit.FlatAppearance.BorderSize = 2;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.btnEdit.Location = new System.Drawing.Point(167, 344);
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.Location = new System.Drawing.Point(167, 371);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(102, 27);
@@ -446,11 +445,11 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(167, 308);
+            this.btnAdd.Location = new System.Drawing.Point(167, 335);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(102, 27);
@@ -460,12 +459,11 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.button1.Location = new System.Drawing.Point(173, 389);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(173, 409);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 27);
@@ -475,12 +473,11 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.button2.Location = new System.Drawing.Point(173, 352);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(173, 372);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 27);
@@ -490,11 +487,11 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(173, 316);
+            this.button3.Location = new System.Drawing.Point(173, 336);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(102, 27);
@@ -504,12 +501,11 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.button4.Location = new System.Drawing.Point(173, 394);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(173, 429);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 27);
@@ -519,12 +515,11 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            this.button5.Location = new System.Drawing.Point(173, 357);
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(173, 392);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(102, 27);
@@ -534,11 +529,11 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(173, 321);
+            this.button6.Location = new System.Drawing.Point(173, 356);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(102, 27);
@@ -550,8 +545,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(997, 550);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.ClientSize = new System.Drawing.Size(997, 586);
             this.ControlBox = false;
             this.Controls.Add(this.dgUtilisateur);
             this.Controls.Add(this.tabControl1);
