@@ -1,17 +1,8 @@
-﻿    using AppSenSoutenance.View;
-using AppSenSoutenance.View.Account;
+﻿using AppSenSoutenance.View.Account;
 using AppSenSoutenance.View.Paramètre;
 using Microsoft.VisualBasic.Devices;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppSenSoutenance
@@ -19,34 +10,23 @@ namespace AppSenSoutenance
     public partial class frmMDI : Form
     {
         public string profil;
+
         public frmMDI()
         {
             InitializeComponent();
-
             ApplyBlueTheme();
         }
 
         private void ApplyBlueTheme()
         {
-            Color bluePrimary = Color.FromArgb(13, 71, 161);
-            Color blueHover = Color.FromArgb(10, 56, 131);
-            Color blueDark = Color.FromArgb(8, 47, 110);
-            Color bg = Color.FromArgb(227, 242, 253);
+            Color bg = ColorTranslator.FromHtml("#F8FAFC");
 
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             BackColor = bg;
 
             if (menuStrip1 != null)
             {
-                menuStrip1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-                menuStrip1.BackColor = blueDark;
-                menuStrip1.ForeColor = Color.White;
-                menuStrip1.Renderer = new ToolStripProfessionalRenderer(new BlueColorTable(blueDark, bluePrimary, blueHover));
-
-                foreach (ToolStripItem item in menuStrip1.Items)
-                {
-                    item.ForeColor = Color.White;
-                }
+                menuStrip1.Visible = false;
             }
 
             Load += (_, __) =>
@@ -155,6 +135,12 @@ namespace AppSenSoutenance
             {
                 sécuritéToolStripMenuItem.Visible = true;
             }
+
+            if (_btnUtilisateur != null)
+            {
+                _btnUtilisateur.Visible = profil == "Admin";
+            }
+
             Computer myComputer = new Computer();
             this.Width = myComputer.Screen.Bounds.Width;
             this.Height = myComputer.Screen.Bounds.Height;
@@ -204,6 +190,56 @@ namespace AppSenSoutenance
             f.MdiParent = this;
             f.Show();
             f.WindowState = FormWindowState.Maximized;
+        }
+
+        private void _btnAnnee_Click(object sender, EventArgs e)
+        {
+            annéeAcadémiqueToolStripMenuItem_Click(this, EventArgs.Empty);
+        }
+
+        private void _btnSession_Click(object sender, EventArgs e)
+        {
+            séssionToolStripMenuItem_Click(this, EventArgs.Empty);
+        }
+
+        private void _btnProfesseur_Click(object sender, EventArgs e)
+        {
+            encadreurToolStripMenuItem_Click(this, EventArgs.Empty);
+        }
+
+        private void _btnSoutenance_Click(object sender, EventArgs e)
+        {
+            soutenanceToolStripMenuItem_Click(this, EventArgs.Empty);
+        }
+
+        private void _btnMemoire_Click(object sender, EventArgs e)
+        {
+            mémoireToolStripMenuItem_Click(this, EventArgs.Empty);
+        }
+
+        private void _btnChefDepartement_Click(object sender, EventArgs e)
+        {
+            chefDeDepartementToolStripMenuItem_Click(this, EventArgs.Empty);
+        }
+
+        private void _btnDepartement_Click(object sender, EventArgs e)
+        {
+            departementToolStripMenuItem_Click(this, EventArgs.Empty);
+        }
+
+        private void _btnUtilisateur_Click(object sender, EventArgs e)
+        {
+            utilisateurToolStripMenuItem_Click(this, EventArgs.Empty);
+        }
+
+        private void _btnDeconnexion_Click(object sender, EventArgs e)
+        {
+            seDeconnecterToolStripMenuItem_Click(this, EventArgs.Empty);
+        }
+
+        private void _btnQuitter_Click(object sender, EventArgs e)
+        {
+            quitterToolStripMenuItem_Click(this, EventArgs.Empty);
         }
     }
 }

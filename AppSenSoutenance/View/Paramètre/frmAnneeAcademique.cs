@@ -1,12 +1,7 @@
 ﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Shared;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppSenSoutenance.View.Paramètre
@@ -16,6 +11,8 @@ namespace AppSenSoutenance.View.Paramètre
         public frmAnneeAcademique()
         {
             InitializeComponent();
+
+            AppTheme.Apply(this);
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();
@@ -106,7 +103,7 @@ namespace AppSenSoutenance.View.Paramètre
             }
 
             txtLibelleAnneeAcademique.Text = dgAnneeAcademique.CurrentRow.Cells[1].Value.ToString();
-            txtAnneeAcademiqueVal.Text = dgAnneeAcademique.CurrentRow.Cells[2].Value.ToString();    
+            txtAnneeAcademiqueVal.Text = dgAnneeAcademique.CurrentRow.Cells[2].Value.ToString();
         }
     }
 }

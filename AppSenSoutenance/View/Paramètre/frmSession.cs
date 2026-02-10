@@ -1,13 +1,8 @@
 ﻿using AppSenSoutenance.Models;
 using AppSenSoutenance.Shared;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppSenSoutenance.View.Paramètre
@@ -17,6 +12,8 @@ namespace AppSenSoutenance.View.Paramètre
         public frmSession()
         {
             InitializeComponent();
+
+            AppTheme.Apply(this);
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();

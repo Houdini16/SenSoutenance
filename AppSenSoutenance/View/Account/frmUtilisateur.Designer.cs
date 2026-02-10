@@ -87,11 +87,12 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(309, 502);
+            this.tabControl1.Size = new System.Drawing.Size(309, 488);
             this.tabControl1.TabIndex = 0;
             // 
             // tabCandidat
             // 
+            this.tabCandidat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.tabCandidat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.tabCandidat.Controls.Add(this.btnRemove);
             this.tabCandidat.Controls.Add(this.btnEdit);
@@ -551,6 +552,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "frmUtilisateur";
             this.Text = "Gestion des utilisateurs";
+            this.Load += new System.EventHandler(this.frmUtilisateur_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabCandidat.ResumeLayout(false);
             this.tabCandidat.PerformLayout();
