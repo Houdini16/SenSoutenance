@@ -36,10 +36,10 @@
             this.txtLibelleAnneeAcademique = new System.Windows.Forms.TextBox();
             this.txtAnneeAcademiqueVal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
+            this.btnAjout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgAnneeAcademique)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,25 +112,11 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Valeur :";
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(170, 303);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(115, 39);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "&Ajouter";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.White;
-            this.btnEdit.FlatAppearance.BorderSize = 2;
             this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnEdit.FlatAppearance.BorderSize = 2;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
             this.btnEdit.Location = new System.Drawing.Point(170, 348);
@@ -144,10 +130,10 @@
             // btnRemove
             // 
             this.btnRemove.BackColor = System.Drawing.Color.White;
-            this.btnRemove.FlatAppearance.BorderSize = 2;
             this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnRemove.FlatAppearance.BorderSize = 2;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.ForeColor = System.Drawing.Color.Black;
             this.btnRemove.Location = new System.Drawing.Point(170, 393);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(115, 39);
@@ -171,6 +157,20 @@
             this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
+            // btnAjout
+            // 
+            this.btnAjout.BackColor = System.Drawing.Color.White;
+            this.btnAjout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnAjout.FlatAppearance.BorderSize = 2;
+            this.btnAjout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjout.ForeColor = System.Drawing.Color.Black;
+            this.btnAjout.Location = new System.Drawing.Point(170, 303);
+            this.btnAjout.Name = "btnAjout";
+            this.btnAjout.Size = new System.Drawing.Size(115, 39);
+            this.btnAjout.TabIndex = 7;
+            this.btnAjout.Text = "&Ajouter";
+            this.btnAjout.UseVisualStyleBackColor = false;
+            // 
             // frmAnneeAcademique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,10 +178,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(905, 494);
             this.ControlBox = false;
+            this.Controls.Add(this.btnAjout);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtAnneeAcademiqueVal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtLibelleAnneeAcademique);
@@ -203,9 +203,9 @@
         private System.Windows.Forms.TextBox txtLibelleAnneeAcademique;
         private System.Windows.Forms.TextBox txtAnneeAcademiqueVal;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.Button btnAjout;
     }
 }

@@ -52,6 +52,9 @@
             this.txtPNom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tabChefDepartement = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.txtCDepartement = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCTel = new System.Windows.Forms.TextBox();
@@ -63,15 +66,12 @@
             this.txtCNom = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dgUtilisateur = new System.Windows.Forms.DataGridView();
+            this.btnAjout = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabCandidat.SuspendLayout();
             this.tabProfesseur.SuspendLayout();
@@ -92,11 +92,10 @@
             // 
             // tabCandidat
             // 
-            this.tabCandidat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.tabCandidat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
+            this.tabCandidat.Controls.Add(this.btnAjout);
             this.tabCandidat.Controls.Add(this.btnRemove);
             this.tabCandidat.Controls.Add(this.btnEdit);
-            this.tabCandidat.Controls.Add(this.btnAdd);
             this.tabCandidat.Controls.Add(this.txtMatricule);
             this.tabCandidat.Controls.Add(this.label5);
             this.tabCandidat.Controls.Add(this.txtTel);
@@ -110,7 +109,7 @@
             this.tabCandidat.Location = new System.Drawing.Point(4, 25);
             this.tabCandidat.Name = "tabCandidat";
             this.tabCandidat.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCandidat.Size = new System.Drawing.Size(301, 473);
+            this.tabCandidat.Size = new System.Drawing.Size(301, 459);
             this.tabCandidat.TabIndex = 0;
             this.tabCandidat.Text = "Candidat";
             this.tabCandidat.Click += new System.EventHandler(this.tabCandidat_Click);
@@ -217,7 +216,7 @@
             this.tabProfesseur.Location = new System.Drawing.Point(4, 25);
             this.tabProfesseur.Name = "tabProfesseur";
             this.tabProfesseur.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProfesseur.Size = new System.Drawing.Size(301, 473);
+            this.tabProfesseur.Size = new System.Drawing.Size(301, 459);
             this.tabProfesseur.TabIndex = 1;
             this.tabProfesseur.Text = "Professeur";
             // 
@@ -320,9 +319,51 @@
             this.tabChefDepartement.Location = new System.Drawing.Point(4, 25);
             this.tabChefDepartement.Name = "tabChefDepartement";
             this.tabChefDepartement.Padding = new System.Windows.Forms.Padding(3);
-            this.tabChefDepartement.Size = new System.Drawing.Size(301, 473);
+            this.tabChefDepartement.Size = new System.Drawing.Size(301, 459);
             this.tabChefDepartement.TabIndex = 2;
             this.tabChefDepartement.Text = "Chef departement";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(173, 429);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 27);
+            this.button4.TabIndex = 38;
+            this.button4.Text = "&Supprimer";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(173, 392);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(102, 27);
+            this.button5.TabIndex = 37;
+            this.button5.Text = "&Modifier";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(173, 356);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(102, 27);
+            this.button6.TabIndex = 36;
+            this.button6.Text = "&Ajouter";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // txtCDepartement
             // 
@@ -415,131 +456,89 @@
             this.dgUtilisateur.Size = new System.Drawing.Size(637, 473);
             this.dgUtilisateur.TabIndex = 1;
             // 
+            // btnAjout
+            // 
+            this.btnAjout.BackColor = System.Drawing.Color.White;
+            this.btnAjout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnAjout.FlatAppearance.BorderSize = 2;
+            this.btnAjout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjout.ForeColor = System.Drawing.Color.Black;
+            this.btnAjout.Location = new System.Drawing.Point(154, 324);
+            this.btnAjout.Name = "btnAjout";
+            this.btnAjout.Size = new System.Drawing.Size(115, 39);
+            this.btnAjout.TabIndex = 12;
+            this.btnAjout.Text = "&Ajouter";
+            this.btnAjout.UseVisualStyleBackColor = false;
+            // 
             // btnRemove
             // 
-            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.BackColor = System.Drawing.Color.White;
+            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnRemove.FlatAppearance.BorderSize = 2;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(167, 408);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRemove.ForeColor = System.Drawing.Color.Black;
+            this.btnRemove.Location = new System.Drawing.Point(154, 414);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(102, 27);
-            this.btnRemove.TabIndex = 12;
+            this.btnRemove.Size = new System.Drawing.Size(115, 39);
+            this.btnRemove.TabIndex = 11;
             this.btnRemove.Text = "&Supprimer";
             this.btnRemove.UseVisualStyleBackColor = false;
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.BackColor = System.Drawing.Color.White;
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnEdit.FlatAppearance.BorderSize = 2;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(167, 371);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Location = new System.Drawing.Point(154, 369);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(102, 27);
-            this.btnEdit.TabIndex = 11;
+            this.btnEdit.Size = new System.Drawing.Size(115, 39);
+            this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "&Modifier";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(167, 335);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(102, 27);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "&Ajouter";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(173, 409);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(160, 324);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 27);
+            this.button1.Size = new System.Drawing.Size(115, 39);
             this.button1.TabIndex = 25;
-            this.button1.Text = "&Supprimer";
+            this.button1.Text = "&Ajouter";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(173, 372);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(160, 414);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 27);
+            this.button2.Size = new System.Drawing.Size(115, 39);
             this.button2.TabIndex = 24;
-            this.button2.Text = "&Modifier";
+            this.button2.Text = "&Supprimer";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button3.FlatAppearance.BorderSize = 2;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(173, 336);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(160, 369);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 27);
+            this.button3.Size = new System.Drawing.Size(115, 39);
             this.button3.TabIndex = 23;
-            this.button3.Text = "&Ajouter";
+            this.button3.Text = "&Modifier";
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(173, 429);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 27);
-            this.button4.TabIndex = 38;
-            this.button4.Text = "&Supprimer";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(173, 392);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 27);
-            this.button5.TabIndex = 37;
-            this.button5.Text = "&Modifier";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(173, 356);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(102, 27);
-            this.button6.TabIndex = 36;
-            this.button6.Text = "&Ajouter";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // frmUtilisateur
             // 
@@ -602,14 +601,14 @@
         private System.Windows.Forms.TextBox txtCNom;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dgUtilisateur;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnAjout;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

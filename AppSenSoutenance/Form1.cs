@@ -81,5 +81,15 @@ namespace AppSenSoutenance
                 Logger.WriteDataError("frmConnexion-btnSeConnecter_Click", ex.ToString());
             }
         }
+
+        private void lblFooter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lnkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
