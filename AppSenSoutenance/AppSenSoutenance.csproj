@@ -140,6 +140,7 @@
     <Compile Include="Shared\AppTheme.cs" />
     <Compile Include="Shared\Crypted.cs" />
     <Compile Include="Shared\FillerList.cs" />
+    <Compile Include="Shared\GMailer.cs" />
     <Compile Include="Shared\Logger.cs" />
     <Compile Include="View\Account\frmUtilisateur.cs">
       <SubType>Form</SubType>

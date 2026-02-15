@@ -14,28 +14,28 @@ namespace AppSenSoutenance
         [STAThread]
         static void Main()
         {
+            InitAdmin();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmConnexion());
         }
 
-        public static void StartApp()
+        static void InitAdmin()
         {
-            BdSenSoutenanceContext db = new BdSenSoutenanceContext();
-            var adminUser = db.Admin.Count();
-            if (adminUser > 0)
+            BdSenSoutenanceContext db  = new BdSenSoutenanceContext();
+            if (db.Admin.Count() == 0)
             {
-                Admin candidat = new Admin();
-                candidat.NomUtilisateur = "THIAM";
-                candidat.PrenomUtilisateur = "Moussa";
-                candidat.TellUtilisateur = "773421212";
-                candidat.EmailUtilisateur = "admin@yopmail.com";
-                using (MD5 md5Hash = MD5.Create())
-                {
-                    candidat.MotDePasse = Shared.Crypted.GetMd5Hash(md5Hash, "password");
-                }
-                db.Admin.Add(candidat);
-                db.SaveChanges();
+                Admin a = new Admin();
+                a.NomUtilisateur = "Admin";
+                a.PrenomUtilisateur = "Admin";
+                a.TellUtilisateur = "770000000";
+                a.EmailUtilisateur = "admin@yopmail.com";
+            using (MD5 md5Hash = MD5.Create())
+            {
+                a.MotDePasse = Shared.Crypted.GetMd5Hash(md5Hash, "passer123");
+            }
+            db.Admin.Add(a);
+            db.SaveChanges();
             }
         }
     }
