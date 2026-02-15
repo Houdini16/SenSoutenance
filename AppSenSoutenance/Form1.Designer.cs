@@ -102,7 +102,7 @@
             this.chkRememberMe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.chkRememberMe.Location = new System.Drawing.Point(55, 365);
             this.chkRememberMe.Name = "chkRememberMe";
-            this.chkRememberMe.Size = new System.Drawing.Size(176, 29);
+            this.chkRememberMe.Size = new System.Drawing.Size(194, 29);
             this.chkRememberMe.TabIndex = 3;
             this.chkRememberMe.Text = "Se souvenir de moi";
             this.chkRememberMe.UseVisualStyleBackColor = true;
@@ -114,10 +114,11 @@
             this.lnkForgotPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
             this.lnkForgotPassword.Location = new System.Drawing.Point(400, 366);
             this.lnkForgotPassword.Name = "lnkForgotPassword";
-            this.lnkForgotPassword.Size = new System.Drawing.Size(165, 25);
+            this.lnkForgotPassword.Size = new System.Drawing.Size(191, 25);
             this.lnkForgotPassword.TabIndex = 4;
             this.lnkForgotPassword.TabStop = true;
             this.lnkForgotPassword.Text = "Mot de passe oublié?";
+            this.lnkForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkForgotPassword_LinkClicked);
             // 
             // btnSeConnecter
             // 
@@ -151,7 +152,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.label2.Location = new System.Drawing.Point(55, 275);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
+            this.label2.Size = new System.Drawing.Size(124, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mot de passe";
             // 
@@ -171,9 +172,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.label1.Location = new System.Drawing.Point(55, 170);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 25);
+            this.label1.Size = new System.Drawing.Size(157, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nom d'utilisateur";
+            this.label1.Text = "Nom d\'utilisateur";
             // 
             // lblFooter
             // 
@@ -183,8 +184,9 @@
             this.lblFooter.Name = "lblFooter";
             this.lblFooter.Size = new System.Drawing.Size(772, 26);
             this.lblFooter.TabIndex = 1;
-            this.lblFooter.Text = "Version 1.0.0 • © 2024 SenSoutenance";
+            this.lblFooter.Text = "Version 1.0.3 • © 2026 SenSoutenance";
             this.lblFooter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFooter.Click += new System.EventHandler(this.lblFooter_Click);
             // 
             // frmConnexion
             // 
