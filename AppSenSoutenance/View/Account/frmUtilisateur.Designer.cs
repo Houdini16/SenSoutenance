@@ -32,7 +32,7 @@
             this.tabCandidat = new System.Windows.Forms.TabPage();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAjout = new System.Windows.Forms.Button();
             this.txtMatricule = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
@@ -215,18 +215,18 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(167, 308);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(102, 27);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "&Ajouter";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAjout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnAjout.FlatAppearance.BorderSize = 0;
+            this.btnAjout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjout.ForeColor = System.Drawing.Color.White;
+            this.btnAjout.Location = new System.Drawing.Point(167, 308);
+            this.btnAjout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAjout.Name = "btnAjout";
+            this.btnAjout.Size = new System.Drawing.Size(102, 27);
+            this.btnAjout.TabIndex = 10;
+            this.btnAjout.Text = "&Ajouter";
+            this.btnAjout.UseVisualStyleBackColor = false;
+            this.btnAjout.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtMatricule
             // 

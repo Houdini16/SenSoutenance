@@ -21,5 +21,8 @@ namespace AppSenSoutenance.Models
 
         [Required, MaxLength(300)]
         public string MotDePasse { get; set; }
+
+        [Required, MaxLength(50)]
+        public string Role { get; set; }
     }
 }

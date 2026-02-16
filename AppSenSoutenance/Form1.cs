@@ -68,12 +68,38 @@ namespace AppSenSoutenance
                 var leUser = db.Utilisateurs.Where(a => a.EmailUtilisateur.ToLower() == txtIdentifiant.Text.ToLower()).FirstOrDefault();
                 if (leUser != null)
                 {
-
+                    // Vérifier le mot de passe
+                    string motDePasse = txtMotDePasse.Text;
+                    if (txtMotDePasse.Text == "Entrez votre mot de passe")
+                    {
+                        MessageBox.Show("Veuillez entrer votre mot de passe", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    
+                    using (var md5Hash = System.Security.Cryptography.MD5.Create())
+                    {
+                        string hashedPassword = Crypted.GetMd5Hash(md5Hash, motDePasse);
+                        if (hashedPassword == leUser.MotDePasse)
+                        {
+                            // Connexion réussie
+                            frmMDI f = new frmMDI();
+                            f.profil = leUser.Role;
+                            f.Show();
+                            this.Hide();
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mot de passe incorrect", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
                 }
-                frmMDI f = new frmMDI();
-                f.profil = "Admin";
-                f.Show();
-                this.Hide();
+                else
+                {
+                    MessageBox.Show("Utilisateur non trouvé", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
             }
             catch (Exception ex)

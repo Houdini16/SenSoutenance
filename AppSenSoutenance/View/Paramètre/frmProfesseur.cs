@@ -17,36 +17,30 @@ namespace AppSenSoutenance.View.Paramètre
 
             AppTheme.Apply(this);
 
-            btnAdd.Click += btnAdd_Click;
-            btnEdit.Click += btnEdit_Click;
-            btnRemove.Click += btnRemove_Click;
-            dataGridView2.CellClick += dataGridView2_CellClick;
+            // Les gestionnaires d'événements sont déjà configurés dans le Designer
         }
 
         private void frmProfesseur_Load(object sender, EventArgs e)
         {
             Effacer();
 
-            if (tabSujet != null && tabPage2 != null)
-            {
-                tabSujet.SelectedTab = tabPage2;
-            }
+            // Initialisation du formulaire
         }
 
         public void Effacer()
         {
-            textBox1.Clear();
-            dataGridView2.DataSource = db.Professeurs.Select(p => new
+            txtSpecialite.Clear();
+            dataGridView1.DataSource = db.Professeurs.Select(p => new
             {
                 p.IdUtilisateur,
                 p.SpecialiteProfesseur
             }).ToList();
-            textBox1.Focus();
+            txtSpecialite.Focus();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrWhiteSpace(txtSpecialite.Text))
             {
                 MessageBox.Show("Veuillez saisir la spécialité.");
                 return;
@@ -54,7 +48,7 @@ namespace AppSenSoutenance.View.Paramètre
 
             Professeur professeur = new Professeur
             {
-                SpecialiteProfesseur = textBox1.Text,
+                SpecialiteProfesseur = txtSpecialite.Text,
                 NomUtilisateur = "Professeur",
                 PrenomUtilisateur = "N/A",
                 TellUtilisateur = "000000000",
@@ -69,48 +63,48 @@ namespace AppSenSoutenance.View.Paramètre
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.CurrentRow == null)
+            if (dataGridView1.CurrentRow == null)
             {
                 MessageBox.Show("Veuillez sélectionner une ligne à modifier.");
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrWhiteSpace(txtSpecialite.Text))
             {
                 MessageBox.Show("Veuillez saisir la spécialité.");
                 return;
             }
 
-            int? id = int.Parse(dataGridView2.CurrentRow.Cells[0].Value.ToString());
+            int? id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             Professeur professeur = db.Professeurs.Find(id);
-            professeur.SpecialiteProfesseur = textBox1.Text;
+            professeur.SpecialiteProfesseur = txtSpecialite.Text;
             db.SaveChanges();
             Effacer();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.CurrentRow == null)
+            if (dataGridView1.CurrentRow == null)
             {
                 MessageBox.Show("Veuillez sélectionner une ligne à supprimer.");
                 return;
             }
 
-            int? id = int.Parse(dataGridView2.CurrentRow.Cells[0].Value.ToString());
+            int? id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             Professeur professeur = db.Professeurs.Find(id);
             db.Professeurs.Remove(professeur);
             db.SaveChanges();
             Effacer();
         }
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView2.CurrentRow == null)
+            if (dataGridView1.CurrentRow == null)
             {
                 return;
             }
 
-            textBox1.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            txtSpecialite.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

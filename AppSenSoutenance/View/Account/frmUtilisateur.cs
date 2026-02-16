@@ -51,6 +51,7 @@ namespace AppSenSoutenance.View.Account
                 candidat.MotDePasse = Shared.Crypted.GetMd5Hash(md5Hash, "passer123");
             }
             candidat.MatriculeCandidat = txtMatricule.Text;
+            candidat.Role = "Candidat";
             db.Candidats.Add(candidat);
             db.SaveChanges();
             ResetForm();
@@ -68,7 +69,7 @@ namespace AppSenSoutenance.View.Account
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            btnAjouter_Click(sender, e);
         }
     }
 }
