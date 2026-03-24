@@ -1,4 +1,4 @@
-﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Models;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -14,13 +14,15 @@ namespace AppSenSoutenance.Shared
         {
             try
             {
-                BdSenSoutenanceContext db = new BdSenSoutenanceContext();
-                Td_Erreur log = new Td_Erreur();
-                log.DateErreur = DateTime.Now;
-                log.DescriptionErreur = erreur.Length > 2000 ? erreur.Substring(0, 2000) : erreur;
-                log.TitreErreur = TitreErreur;
-                db.Td_Erreur.Add(log);
-                db.SaveChanges();
+                using (BdSenSoutenanceContext db = new BdSenSoutenanceContext())
+                {
+                    Td_Erreur log = new Td_Erreur();
+                    log.DateErreur = DateTime.Now;
+                    log.DescriptionErreur = erreur.Length > 2000 ? erreur.Substring(0, 2000) : erreur;
+                    log.TitreErreur = TitreErreur;
+                    db.Td_Erreur.Add(log);
+                    db.SaveChanges();
+                }
             }
             catch (Exception ex)
             {

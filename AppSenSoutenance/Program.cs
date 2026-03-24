@@ -1,4 +1,4 @@
-﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Models;
 using System;
 using System.Linq;
 using System.Security.Cryptography;
@@ -31,6 +31,7 @@ namespace AppSenSoutenance
 
             try
             {
+                StartApp(); // Initialiser la base de données
                 Application.Run(new frmConnexion());
             }
             catch (Exception ex)
@@ -43,8 +44,8 @@ namespace AppSenSoutenance
         {
             try
             {
-                string path = Path.Combine(Application.StartupPath, "startup_error.log");
-                File.AppendAllText(path, $"[{DateTime.Now:O}]\r\n{ex}\r\n\r\n");
+                string path = System.IO.Path.Combine(Application.StartupPath, "startup_error.log");
+                System.IO.File.AppendAllText(path, $"[{DateTime.Now:O}]\r\n{ex}\r\n\r\n");
             }
             catch
             {
@@ -61,21 +62,27 @@ namespace AppSenSoutenance
 
         public static void StartApp()
         {
-            BdSenSoutenanceContext db = new BdSenSoutenanceContext();
-            var adminUser = db.Admin.Count();
-            if (adminUser > 0)
+            using (BdSenSoutenanceContext db = new BdSenSoutenanceContext())
             {
-                Admin candidat = new Admin();
-                candidat.NomUtilisateur = "THIAM";
-                candidat.PrenomUtilisateur = "Moussa";
-                candidat.TellUtilisateur = "773421212";
-                candidat.EmailUtilisateur = "admin@yopmail.com";
-                using (MD5 md5Hash = MD5.Create())
+                // Force la création des tables même si la base de données existe déjà
+                System.Data.Entity.Database.SetInitializer(new System.Data.Entity.CreateDatabaseIfNotExists<BdSenSoutenanceContext>());
+                db.Database.Initialize(true);
+
+                var adminCount = db.Admin.Count();
+                if (adminCount == 0)
                 {
-                    candidat.MotDePasse = Shared.Crypted.GetMd5Hash(md5Hash, "password");
+                    Admin admin = new Admin();
+                    admin.NomUtilisateur = "AIDARA";
+                    admin.PrenomUtilisateur = "Moulaye";
+                    admin.TellUtilisateur = "770000000";
+                    admin.EmailUtilisateur = "moulaye";
+                    using (MD5 md5Hash = MD5.Create())
+                    {
+                        admin.MotDePasse = Shared.Crypted.GetMd5Hash(md5Hash, "123");
+                    }
+                    db.Admin.Add(admin);
+                    db.SaveChanges();
                 }
-                db.Admin.Add(candidat);
-                db.SaveChanges();
             }
         }
     }

@@ -30,6 +30,9 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCandidat = new System.Windows.Forms.TabPage();
+            this.btnAjout = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.txtMatricule = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
@@ -41,6 +44,9 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabProfesseur = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.txtPSpecialite = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPTel = new System.Windows.Forms.TextBox();
@@ -66,12 +72,6 @@
             this.txtCNom = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dgUtilisateur = new System.Windows.Forms.DataGridView();
-            this.btnAjout = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabCandidat.SuspendLayout();
             this.tabProfesseur.SuspendLayout();
@@ -113,6 +113,48 @@
             this.tabCandidat.TabIndex = 0;
             this.tabCandidat.Text = "Candidat";
             this.tabCandidat.Click += new System.EventHandler(this.tabCandidat_Click);
+            // 
+            // btnAjout
+            // 
+            this.btnAjout.BackColor = System.Drawing.Color.White;
+            this.btnAjout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnAjout.FlatAppearance.BorderSize = 2;
+            this.btnAjout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjout.ForeColor = System.Drawing.Color.Black;
+            this.btnAjout.Location = new System.Drawing.Point(154, 324);
+            this.btnAjout.Name = "btnAjout";
+            this.btnAjout.Size = new System.Drawing.Size(115, 39);
+            this.btnAjout.TabIndex = 12;
+            this.btnAjout.Text = "&Ajouter";
+            this.btnAjout.UseVisualStyleBackColor = false;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.White;
+            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnRemove.FlatAppearance.BorderSize = 2;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.ForeColor = System.Drawing.Color.Black;
+            this.btnRemove.Location = new System.Drawing.Point(154, 414);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(115, 39);
+            this.btnRemove.TabIndex = 11;
+            this.btnRemove.Text = "&Supprimer";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.White;
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.btnEdit.FlatAppearance.BorderSize = 2;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.Location = new System.Drawing.Point(154, 369);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(115, 39);
+            this.btnEdit.TabIndex = 10;
+            this.btnEdit.Text = "&Modifier";
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // txtMatricule
             // 
@@ -219,6 +261,48 @@
             this.tabProfesseur.Size = new System.Drawing.Size(301, 459);
             this.tabProfesseur.TabIndex = 1;
             this.tabProfesseur.Text = "Professeur";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(160, 324);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 39);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "&Ajouter";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(160, 414);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 39);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "&Supprimer";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(160, 369);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(115, 39);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "&Modifier";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // txtPSpecialite
             // 
@@ -456,96 +540,12 @@
             this.dgUtilisateur.Size = new System.Drawing.Size(637, 473);
             this.dgUtilisateur.TabIndex = 1;
             // 
-            // btnAjout
-            // 
-            this.btnAjout.BackColor = System.Drawing.Color.White;
-            this.btnAjout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.btnAjout.FlatAppearance.BorderSize = 2;
-            this.btnAjout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjout.ForeColor = System.Drawing.Color.Black;
-            this.btnAjout.Location = new System.Drawing.Point(154, 324);
-            this.btnAjout.Name = "btnAjout";
-            this.btnAjout.Size = new System.Drawing.Size(115, 39);
-            this.btnAjout.TabIndex = 12;
-            this.btnAjout.Text = "&Ajouter";
-            this.btnAjout.UseVisualStyleBackColor = false;
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.White;
-            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.btnRemove.FlatAppearance.BorderSize = 2;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.ForeColor = System.Drawing.Color.Black;
-            this.btnRemove.Location = new System.Drawing.Point(154, 414);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(115, 39);
-            this.btnRemove.TabIndex = 11;
-            this.btnRemove.Text = "&Supprimer";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.White;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.btnEdit.FlatAppearance.BorderSize = 2;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(154, 369);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(115, 39);
-            this.btnEdit.TabIndex = 10;
-            this.btnEdit.Text = "&Modifier";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(160, 324);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 39);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "&Ajouter";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(160, 414);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 39);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "&Supprimer";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(160, 369);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 39);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "&Modifier";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // frmUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(997, 586);
+            this.ClientSize = new System.Drawing.Size(997, 644);
             this.ControlBox = false;
             this.Controls.Add(this.dgUtilisateur);
             this.Controls.Add(this.tabControl1);

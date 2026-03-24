@@ -247,5 +247,10 @@ namespace AppSenSoutenance.View.Paramètre
             RefreshGrid();
             EffacerInputsOnly();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

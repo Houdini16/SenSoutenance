@@ -1,4 +1,4 @@
-﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Models;
 using AppSenSoutenance.Shared;
 using System;
 using System.Data;
@@ -64,21 +64,43 @@ namespace AppSenSoutenance
         {
             try
             {
-                BdSenSoutenanceContext db = new BdSenSoutenanceContext();
-                var leUser = db.Utilisateurs.Where(a => a.EmailUtilisateur.ToLower() == txtIdentifiant.Text.ToLower()).FirstOrDefault();
-                if (leUser != null)
+                using (var db = new BdSenSoutenanceContext())
                 {
+                    string email = txtIdentifiant.Text.Trim();
+                    string password = txtMotDePasse.Text;
 
+                    var user = db.Utilisateurs.FirstOrDefault(u => u.EmailUtilisateur.ToLower() == email.ToLower());
+                    
+                    if (user != null)
+                    {
+                        bool isCorrect = false;
+                        using (var md5Hash = System.Security.Cryptography.MD5.Create())
+                        {
+                            isCorrect = Shared.Crypted.VerifyMd5Hash(md5Hash, password, user.MotDePasse);
+                        }
+
+                        if (isCorrect)
+                        {
+                            frmMDI f = new frmMDI();
+                            f.profil = (user is Admin) ? "Admin" : "User";
+                            f.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mot de passe incorrect.", "Authentification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Utilisateur non trouvé.", "Authentification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-                frmMDI f = new frmMDI();
-                f.profil = "Admin";
-                f.Show();
-                this.Hide();
-
             }
             catch (Exception ex)
             {
                 Logger.WriteDataError("frmConnexion-btnSeConnecter_Click", ex.ToString());
+                MessageBox.Show("Une erreur est survenue lors de la connexion.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

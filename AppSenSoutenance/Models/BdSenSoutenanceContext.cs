@@ -1,9 +1,7 @@
-﻿using MySql.Data.EntityFramework;
 using System.Data.Entity;
 
 namespace AppSenSoutenance.Models
 {
-    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class BdSenSoutenanceContext : DbContext
     {
         public BdSenSoutenanceContext() : base("connBdSenSoutenance") { }
@@ -29,5 +27,12 @@ namespace AppSenSoutenance.Models
         public DbSet<Professeur> Professeurs { get; set; }
 
         public DbSet<Td_Erreur> Td_Erreur { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            // PostgreSQL utilise le schéma 'public' par défaut au lieu de 'dbo'
+            modelBuilder.HasDefaultSchema("public");
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
